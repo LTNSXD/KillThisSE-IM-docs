@@ -2,7 +2,9 @@ site_name: KillThisSE Docs
 
 nav:
   - Whatever: api.md
-  - Home: modules.md
+  - Home
+    - abc: api.md
+    - bcd: modules.md
 
 theme:
   name: material
