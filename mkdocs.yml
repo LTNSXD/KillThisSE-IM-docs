@@ -4,9 +4,9 @@ nav:
   - KillThisSE IM: 
     - index.md
   - 模块设计: 
-    - api.md
-  - API文档: 
     - modules.md
+  - API文档: 
+    - api.md
 
 theme:
   name: material
