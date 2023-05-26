@@ -1,8 +1,12 @@
 site_name: KillThisSE IM Docs
 
 nav:
-  - 模块设计: api.md
-  - API文档: modules.md
+  - KillThisSE IM: 
+    - index.md
+  - 模块设计: 
+    - api.md
+  - API文档: 
+    - modules.md
 
 theme:
   name: material
