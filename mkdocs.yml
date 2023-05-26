@@ -1,0 +1,15 @@
+site_name: KillThisSE Docs
+
+nav:
+  - Whatever: api.md
+  - Home: modules.md
+
+theme:
+  name: material
+  language: zh
+
+  custom_dir: theme/
+
+plugins:
+  - search
+  - git-authors
