@@ -14,11 +14,11 @@ nav:
       - 会话相关: develop/design/api/user/conv.md
       - 群聊管理: develop/design/api/user/group.md
     - 消息模块: develop/design/api/msg.md
-  - 技术选型与部署: tech.md
   - 模型文档: 
     - database/index.md
     - user模型: database/user.md
     - msg模型: database/msg.md
+  - 技术选型与部署: tech.md
   - 用户手册: manual.md
 
 theme:
