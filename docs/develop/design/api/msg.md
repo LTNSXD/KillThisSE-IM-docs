@@ -49,30 +49,29 @@
 
 ??? example "示例"
     === "仅文本消息"
-        ```json
-        {             
-            "token": token,             
-            "message": "Hello, World"         
-        }         
+        ```json         
+        {                          
+            "token": token,                          
+            "message": "Hello, World"                  
+        }                  
         ```
 
     === "多媒体消息"
-        ```json         
-        {             
-            "token": token,             
-            "message": whatever,            
-            "is_image": true,             
-            "image_url": "https://killthisse-avatar.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A41.jpg"         
-        }         
+        ```json                  
+        {                          
+            "token": token,                          
+            "message": whatever,                         
+            "is_image": true,                          
+            "image_url": "https://killthisse-avatar.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A41.jpg"                  
+        }                  
         ```
 
     === "转发消息"
-        ```json         
-        {             
-            "token": token,             
-            "message": [1, 4, 5, 8, 9, 10],             
-            "forward": true         
-        }         
+        ```json                  
+        {                          
+            "token": token,                          
+            "message": [1, 4, 5, 8, 9, 10],                          "forward": true                  
+        }                 
         ```
 
 ## 发送
@@ -83,6 +82,77 @@
 
 !!! note "返回体"
 
-    返回体以表格的形式给出
+    返回体的格式为
 
-    
+    ```json     
+    {         
+        "messages": 消息列表,         
+        "last_msg": 该会话的最后一条消息,         
+        "len_of_msgs": 会话含有消息数目的总数,         
+        "unread_msgs": 未读消息计数,         
+        "mentioned": 用户在该会话是否被提及     
+    }     
+    ```
+
+以下以表格的形式展示消息列表中，每条消息所包含的信息
+
+| 参数名            | 参数类型 | 说明                           |
+| ----------------- | -------- | ------------------------------ |
+| conversation_id   | int      | 自身所在的会话id               |
+| msg_id            | int      | 消息id                         |
+| msg_body          | str      | 消息主体                       |
+| sender_id         | int      | 发送者id                       |
+| sender_name       | str      | 发送者昵称                     |
+| sender_avatar     | str      | 发送者头像                     |
+| create_time       | datetime | 创建时间                       |
+| is_image          | bool     | 图像标志                       |
+| image_url         | str      | 图像url                        |
+| is_file           | bool     | 文件标志                       |
+| file_url          | str      | 文件url                        |
+| is_audio          | bool     | 语音标志                       |
+| is_video          | bool     | 视频标志                       |
+| quote_with        | int      | 引用的消息对象                 |
+| mentioned_members | list     | 提及的成员列表                 |
+| is_transmit       | bool     | 转发消息标志                   |
+| transmit_with     | list     | 转发的消息列表                 |
+| is_read           | bool     | （私聊用）对方是否已读这条消息 |
+
+??? example "示例"
+
+    === "返回体示例"
+    ```json     
+    {         
+        "messages": [             
+            {                 
+                "conversation_id": "14",                 
+                "msg_id": 68,                 
+                "msg_body": "I Love THU-CST",                
+                "sender_id": 13,                 
+                "sender_name": "Asplanic",                 
+                "sender_avatar": "https://killthisse-avatar.oss-cn-beijing.aliyuncs.com/1684983737349%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230116192705.jpg",                 
+                "create_time": "05-25 11:07",                 
+                "is_image": null,                 
+                "image_url": null,                 
+                "is_file": null,                 
+                "file_url": null,                 
+                "is_audio": null,                 
+                "is_video": null,                 
+                "quote_with": -1,                 
+                "mentioned_members": [],                 
+                "is_transmit": false,                 
+                "transmit_with": [],                 
+                "is_read": false             
+            }         
+        ],         
+        "members": [             
+            {                 
+                "user_id": 12,                 
+                "user_name": "whynb",                 
+                "user_avatar": "https://killthisse-avatar.oss-cn-beijing.aliyuncs.com/%E9%BB%98%E8%AE%A47.png"             
+            }
+        ],        
+        "len_of_msgs": 2,         
+        "unread_msgs": 2,         
+        "mentioned": false
+    }     
+    ```
