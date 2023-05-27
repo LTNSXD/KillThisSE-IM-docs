@@ -6,7 +6,14 @@ nav:
   - 模块设计: 
     - develop/design/modules.md
   - API文档: 
-    - develop/design/api.md
+    - develop/design/api/index.md
+    - 用户模块:
+      - 账号相关: develop/design/api/user/auth.md
+      - 个人信息: develop/design/api/user/info.md
+      - 好友相关: develop/design/api/user/friend.md
+      - 会话相关: develop/design/api/user/conv.md
+      - 群聊管理: develop/design/api/user/group.md
+    - 消息模块: develop/design/api/msg.md
 
 theme:
   name: material
@@ -44,6 +51,7 @@ markdown_extensions:
   - def_list
   - toc:
       permalink: true
+      toc_depth: 4
   - pymdownx.arithmatex
   - pymdownx.caret
   - pymdownx.critic
