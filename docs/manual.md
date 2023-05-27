@@ -2,7 +2,7 @@
 
 欢迎使用KillThisSE IM!
 
-本平台地址: [KillThisSE IM](https://2023-im-frontend-killthisse.app.secoder.net)
+本平台地址: [KillThisSE IM | 即时通讯系统](https://2023-im-frontend-killthisse.app.secoder.net)
 
 ## 注册与登录
 
