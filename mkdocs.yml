@@ -24,6 +24,7 @@ nav:
 theme:
   name: material
   language: zh
+  favicon: assets/favicon.jpg
 
   custom_dir: theme/
   features:
