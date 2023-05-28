@@ -28,4 +28,4 @@ django rest framework具有方便的鉴权功能，在IM中，由于我们需要
 
 关于数据库部署，由于 SECoder 直接拉取官方镜像无法挂载密码环境变量，这会导致数据库不可登录。于是我们基于官方镜像自行定制了挂载了 root 密码环境变量和初始化 sql 文件的 MySQL 5.7 镜像，将其部署到了 SECoder 容器中。
 
-关于Redis部署，我们直接拉去了官方镜像redis:5，并将其部署到了SECoder容器中。
+关于Redis部署，我们直接拉取了官方镜像redis:5，并将其部署到了SECoder容器中。
